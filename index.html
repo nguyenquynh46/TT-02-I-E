@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Game Pikachu</title>
+    <link rel="icon" type="image/icon" href="./images/logo.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="side-bar">
+        <h3>Người chơi</h3>
+        <p>Điểm cao nhất <strong> 123</strong></p>
+        <button class="time" id="time">Time 1:00</button>
+        <button class="hover start" onclick="play()" >Bắt đầu</button>
+        <button class="hover again" onclick="againPlay()" >Chơi lại</button>
+        <button class="hover change" onclick="change()">Hoán đổi</button>
+        <button class="hover help">Trợ giúp</button>
+        <div>
+            <span>Level</span>
+            <select id="select">
+                <option value="easy">easy</option>
+                <option value="hard">hard</option>
+
+            </select>
+        </div>
+        <p>Điểm số : <span>0</span></p>
+        <p>Máu : <span>10</span></p>
+        <div id="gameOverModal" class="modal">
+
+            <div class="modal-content">
+                <strong class="close">&times;</strong>
+                <h1>Game Over!</h1>
+                <p>Your time is up.</p>
+                <button class="hover again1" onclick="againPlay()">Chơi lại</button>
+            </div>
+        </div>
+    </div>
+    <div class="main" id="main">
+        <h1>Game Pikachu</h1>
+        <div class="main-game " id="main-game">
+
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>
