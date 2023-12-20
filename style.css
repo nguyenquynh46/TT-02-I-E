@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Roboto', sans-serif;
     color: #eadb09;
+    box-sizing: border-box;
 }
 .container{
     display: flex;
@@ -28,13 +29,56 @@
 }
 .side-bar h3{
     color: #eadb09;
-    font-size: 30px;
+    font-size: 22px;
     margin-top: 20px;
 
+}
+#login-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+font-size: 18px;
+
+}
+form{
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 200px;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+}
+label{
+display: inline-block;
+    width: 40%;
+
+}
+.form{
+    padding: 20px 30px;
+}
+.submit{
+    text-align: center;
+    font-size: 18px;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.point{
+    font-size: 30px;
 }
 .side-bar p{
 
     font-size: 20px;
+}
+h3 i{
+    color: red;
 }
 .side-bar p:last-child{
     margin-bottom: 30px;
@@ -57,7 +101,10 @@
     display: none;
 }
 
+.score,.bloodFirts{
+    font-size: 30px;
 
+}
 .side-bar .hover:hover {
     background-color: #eadb09;
     color: #0d273c;
@@ -70,8 +117,9 @@
     background-color:#0d273c ;
 }
 .main{
+
     position: relative;
-    width: 65%;
+    width: 70%;
     height: 90%;
     background-color:#306a9a ;
     border: 3px solid black;
@@ -79,32 +127,62 @@
     text-align: center;
 }
 .main h1{
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 .main-game{
     position: relative;
     width: inherit;
     margin: auto;
 
+}
+.image{
+    cursor: pointer;
+    margin: auto;
 
 }
-.main-game .image1{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 40px;
-    height: 50px;
-
+.disabled-element {
+    pointer-events: none;
 }
-.main-game .image2{
+.image:hover{
+    border: 2px solid red;
+}
+.hidden{
+    display: none;
+}
+.section {
     position: absolute;
-    top:0;
-    left: 40px;
-    width: 40px;
-    height: 50px;
+    /* Các thuộc tính khác cho .section */
+    z-index: 1; /* Đặt z-index của .section */
+}
 
+.section.path-right:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: red;
+    z-index: 10;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.section.path-bottom:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background: red;
+    z-index: 10;
+    left: 50%;
+   bottom: 50%;
+    transform: translateX(-50%);
+}
+img{
+    width: 100%;
+    height: 100%;
 }
 
 .modal {
@@ -140,3 +218,41 @@
     color: black;
 
 }
+.progress-bar{
+    width: 60%;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #0d273c;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#progress-bar {
+   width: 100%;
+    height: 100%;
+    background-color: red;
+    border-radius: 5px;
+    /*transition: width 60s linear;*/
+}
+#mute-button {
+    cursor: pointer;
+}
+#mute-button {
+    position: relative;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#mute-cross {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-weight: bold;
+    font-size: 35px;
+    transition: opacity 0.3s;
+}
+
+

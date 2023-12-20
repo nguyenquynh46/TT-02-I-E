@@ -8,18 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
 <div class="container">
+    <div id="login-modal" class="modalName">
+
+
+        <form>
+<div class="form">
+    <label for="username">Tên người dùng:</label>
+    <input type="text" id="username" name="username" required>
+</div>
+             <div class="form">
+
+                 <label for="password">Mật khẩu:</label>
+                 <input type="password" id="password" name="password" required>
+             </div>
+
+<div  class="submit" >
+    <button type="submit">Đăng nhập</button>
+</div>
+
+            </form>
+
+    </div>
     <div class="side-bar">
-        <h3>Người chơi</h3>
-        <p>Điểm cao nhất <strong> 123</strong></p>
+        <h3>Người chơi: <i class="name"></i></h3>
+        <h3>Điểm cao nhất <strong class="point"> </strong>  </h3>
+
         <button class="time" id="time">Time 1:00</button>
         <button class="hover start" onclick="play()" >Bắt đầu</button>
-        <button class="hover again" onclick="againPlay()" >Chơi lại</button>
-        <button class="hover change" onclick="change()">Hoán đổi</button>
+        <button class="hover again againPlay"  >Chơi lại</button>
+        <button class="hover change" >Hoán đổi</button>
         <button class="hover help">Trợ giúp</button>
         <div>
             <span>Level</span>
@@ -29,25 +53,36 @@
 
             </select>
         </div>
-        <p>Điểm số : <span>0</span></p>
-        <p>Máu : <span>10</span></p>
+        <p>Điểm số : <strong class="score">0</strong></p>
+        <p>Mạng : <strong class="bloodFirts">10</strong></p>
+        <div id="mute-button">
+            <i id="mute-icon" class="fas fa-volume-up"></i>
+            <span id="mute-cross">x</span>
+        </div>
+
         <div id="gameOverModal" class="modal">
 
             <div class="modal-content">
                 <strong class="close">&times;</strong>
                 <h1>Game Over!</h1>
                 <p>Your time is up.</p>
-                <button class="hover again1" onclick="againPlay()">Chơi lại</button>
+                <button class="hover again1 againPlay">Chơi lại</button>
             </div>
         </div>
     </div>
     <div class="main" id="main">
         <h1>Game Pikachu</h1>
+        <div class="progress-bar">
+            <div id="progress-bar"></div>
+        </div>
+
         <div class="main-game " id="main-game">
 
         </div>
     </div>
+
 </div>
+
 <script src="script.js"></script>
 <script>
 
